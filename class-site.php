@@ -35,7 +35,7 @@ class Sublanguage_site extends Sublanguage_current {
 			
 			add_filter('the_content', array($this, 'translate_post_content'), 9); // -> allowed @from 2.5
 			add_filter('the_title', array($this, 'translate_post_title'), 10, 2);
-			add_filter('get_the_excerpt', array($this, 'translate_post_excerpt'), 9);
+			add_filter('get_the_excerpt', array($this, 'translate_post_excerpt'), 9,2);
 			add_filter('single_post_title', array($this, 'translate_single_post_title'), 10, 2);
 			add_filter('get_post_metadata', array($this, 'translate_meta_data'), 10, 4);
 			add_filter('wp_setup_nav_menu_item', array($this, 'translate_menu_nav_item'));
